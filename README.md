@@ -10,7 +10,7 @@ docvault は、個人の Markdown メモを `inbox/` に集め、エージェン
 
 1. 雑メモを Markdown の Capture として `inbox/` に入れる。
 2. エージェントが `AGENTS.md` に従って Processing Run を行う。
-3. 人間が Git diff で校正、frontmatter、分類、移動先を確認する。
+3. ユーザーが Git diff で校正、frontmatter、分類、移動先を確認する。
 4. 問題なければ main に取り込む。
 
 ## Documents

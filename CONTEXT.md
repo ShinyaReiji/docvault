@@ -49,11 +49,11 @@ A filed document that is preserved for history but removed from the active note 
 _Avoid_: Deleted note, cold storage
 
 **Processing Run**:
-One bounded pass where an agent reviews Captures, decides what can be filed, and leaves ambiguous or sensitive material visible for human review. A Processing Run is reviewed as a single unit.
+One bounded pass where an agent reviews Captures, decides what can be filed, and leaves ambiguous or sensitive material visible for user review. A Processing Run is reviewed as a single unit.
 _Avoid_: Batch job, automation, import
 
 **Processing Log**:
-A lightweight human-readable list of filing actions produced during Processing Runs. The Processing Log is an index for review, not the authoritative history.
+A lightweight plain-language list of filing actions produced during Processing Runs. The Processing Log is an index for review, not the authoritative history.
 _Avoid_: Audit log, changelog, decision record
 
 **Needs Review**:
