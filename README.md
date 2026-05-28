@@ -17,6 +17,7 @@ docvault は、個人の Markdown メモを `inbox/` に集め、エージェン
 
 - [DESIGN.md](DESIGN.md): なぜこの形にしたか。
 - [AGENTS.md](AGENTS.md): agent が inbox を処理するときの policy。
+- [examples/](examples/): Processing Run の判断境界を示す非運用の Example Case。Capture ではなく、Processing Run では処理しません。
 - [schema/note.schema.json](schema/note.schema.json): Filed Note の frontmatter contract。
 - [CONTEXT.md](CONTEXT.md): この repo で使う用語。
 

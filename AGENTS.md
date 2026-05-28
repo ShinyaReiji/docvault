@@ -8,6 +8,8 @@ Do not write scripts. Act directly on files according to this policy.
 
 Before changing files, use a branch named `codex/inbox-YYYY-MM-DD`. Never commit directly to `main`.
 
+Processing Run targets only `inbox/*.md` Captures. Files under `examples/` are non-operational Example Cases. Never process, move, stage, commit, or count `examples/*.md` as Captures during a Processing Run.
+
 For each `inbox/*.md` Capture not marked with parseable `do-not-process: true`:
 
 1. If the Capture contains secrets, credentials, financial data, or identity data, leave the body untouched in `inbox/`, do not stage or commit that file, and report it as left uncommitted.

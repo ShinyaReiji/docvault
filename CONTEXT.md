@@ -64,6 +64,14 @@ _Avoid_: Error, failed processing, skipped file
 A user's explicit instruction that a Capture must be left untouched during a Processing Run. Do Not Process is separate from Needs Review because no agent judgment is being requested.
 _Avoid_: Skip, ignore, archived
 
+**Example Case**:
+A non-operational Markdown example that illustrates how policy should classify or handle a Capture. An Example Case is not a Capture, is never processed during a Processing Run, and exists only to make judgment boundaries reviewable.
+_Avoid_: Sample Run, test Capture, fixture
+
+**Expected Judgment**:
+The processing decision that an Example Case is meant to illustrate, including the chosen action and any explicit non-actions. An Expected Judgment is not a required byte-for-byte output and does not freeze prose edits, filenames, or generated note bodies beyond the policy boundary being demonstrated.
+_Avoid_: Golden output, snapshot
+
 ## Example Dialogue
 
 **User**: "I dropped three Captures into the Inbox. Can you process them?"
