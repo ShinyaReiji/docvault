@@ -8,11 +8,11 @@ Do not write scripts. Act directly on files according to this policy.
 
 Before changing files, use a branch named `codex/inbox-YYYY-MM-DD`. Never commit directly to `main`.
 
-Processing Run targets only `inbox/*.md` Captures. Files under `examples/` are non-operational Example Cases. Never process, move, stage, commit, or count `examples/*.md` as Captures during a Processing Run.
+Processing Run targets only `inbox/*.md` Captures. Files under `examples/` are non-operational Example Cases. Never process, move, or count `examples/*.md` as Captures. Never stage or commit files under `examples/` during a Processing Run.
 
 For each `inbox/*.md` Capture not marked with parseable `do-not-process: true`:
 
-1. If the Capture contains secrets, credentials, financial data, or identity data, leave the body untouched in `inbox/`, do not stage or commit that file, and report it as left uncommitted.
+1. If the Capture contains secrets, credentials, financial data, or identity data, leave the file completely untouched in `inbox/`, do not stage or commit that file, and report it as left uncommitted.
 2. If the Capture cannot be safely filed because classification, format, metadata, or intent is unclear, leave the body untouched, add or update only frontmatter with `status: needs-review` and a one-line `review_note`, and keep it in `inbox/`.
 3. Otherwise, proofread lightly. Fix typos, punctuation, and inconsistent notation. Preserve the author's meaning and voice. Do not summarize, expand, or invent facts.
 4. Add YAML frontmatter matching `schema/note.schema.json`.
@@ -31,11 +31,12 @@ One normal Processing Run produces one commit with message `inbox: filed <n> not
 - Dated personal log, diary-like entry, or fleeting thought -> `notes/journal/` with `type: journal`.
 - Complete, obsolete, or removed from active reference -> `archive/` with `type: archive` and `status: archived`.
 
-If you cannot choose confidently, do not guess. Use `status: needs-review` and a one-line `review_note`.
+If you cannot choose confidently, do not guess a Note Type. Use `status: needs-review` and a one-line `review_note`; the file remains a Capture in `inbox/`, not a Filed Note.
 
 ## Frontmatter Rules
 
-- Required fields: `title`, `created`, `type`.
+- Filed Note frontmatter required fields: `title`, `created`, `type`.
+- Needs Review Capture frontmatter may use `status: needs-review` and `review_note` without guessing a Note Type.
 - Optional `status` values: `needs-review`, `processed`, `archived`.
 - Optional `tags`: one to three lowercase ASCII kebab-case strings with evidence in the Capture.
 - Optional `source`: use only when the Capture explicitly names a URL, book, meeting, person, or imported note system.

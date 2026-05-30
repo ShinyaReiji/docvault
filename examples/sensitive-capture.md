@@ -16,8 +16,7 @@ The real capture includes an account number, a recovery code, and an API key pas
 
 - action: sensitive-left-uncommitted
 - destination: keep in `inbox/`
-- body: unchanged
-- frontmatter: unchanged unless already present
+- file: unchanged
 - move: no
 - stage: no
 - commit: no
